@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DAOyDTO/DAOyDTO.iml" filepath="$PROJECT_DIR$/DAOyDTO/DAOyDTO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FactoryMethod/FactoryMethod.iml" filepath="$PROJECT_DIR$/FactoryMethod/FactoryMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MVC Pattern/MVC Pattern.iml" filepath="$PROJECT_DIR$/MVC Pattern/MVC Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Patrones de Diseño.iml" filepath="$PROJECT_DIR$/.idea/Patrones de Diseño.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Singleton Pattern/Singleton Pattern.iml" filepath="$PROJECT_DIR$/Singleton Pattern/Singleton Pattern.iml" />
+    </modules>
+  </component>
+</project>
