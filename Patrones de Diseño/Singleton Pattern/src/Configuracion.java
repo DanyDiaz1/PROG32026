@@ -16,7 +16,10 @@ public class Configuracion {
     public static Configuracion getInstancia() {
 
         if (instancia == null) {
+            System.out.println("Se esta creando la instancia por primera vez");
             instancia = new Configuracion();
+        }else {
+            System.out.println("La instancia ya se creo, se va a devolver esa conexion");
         }
 
         return instancia;
