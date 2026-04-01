@@ -2,9 +2,9 @@ import java.util.function.Function;
 
 public class App {
     public static void main(String[] args) {
-        Operacion suma = (a,b)-> a*b;
+        Operacion multiplicacion = (a,b)->a*b;
 
-        System.out.println(suma.calcular(5,3));
+        System.out.println(multiplicacion.calcular(5,3));
 
         Function<String,Integer> longitud = (str)->{return str.length();};
 

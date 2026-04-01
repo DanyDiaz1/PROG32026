@@ -7,12 +7,14 @@ public class Main {
         Optional<Usuario> usuario = UsuarioRespository.buscarPorNombre("Ana");
 
         //usuario.ifPresent(u -> System.out.println("Usuario encontrado: " + u.getNombre()));
-        if(usuario.isPresent()){
+
+        /*if(usuario.isPresent()){
             System.out.println(usuario.get().getNombre());
         }else{
             System.out.println("El usuario no se encontro");
-        }
-        Optional<Usuario> usuarioNoExiste = UsuarioRespository.buscarPorNombre("Carlos");
+        }*/
+
+        Optional<Usuario> usuarioNoExiste = UsuarioRespository.buscarPorNombre("Dany");
         System.out.println("Usuario encontrado: " + usuarioNoExiste.orElse(new Usuario("Invitado")).getNombre());
     }
 }

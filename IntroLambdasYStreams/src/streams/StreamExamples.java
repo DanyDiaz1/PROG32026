@@ -8,20 +8,21 @@ public class StreamExamples {
         List<String> names = Arrays.asList("Ana", "Luis", "Maria", "Pedro", "Juan", "Carla");
 
 //        // 🎯 filter(): Filtra los elementos que cumplen una condición.
-//        names.stream()
-//                .filter(name -> name.length() > 4)
-//                .forEach(System.out::println);
+        //names.stream()
+                //.filter(name -> name.length() > 4)
+                //.forEach(System.out::println);
+
 
 //        // 🚀 map(): Transforma los elementos aplicando una función.
         //names.stream()
-               // .map(String::length)
-               // .forEach(System.out::println);
+                //.map(String::length)
+                //.forEach(System.out::println);
 
 
 //        // 📊 sorted(): Ordena los elementos del stream.
-//        names.stream()
-//                .sorted()
-//                .forEach(System.out::println);
+        //names.stream()
+                //.sorted()
+                //.forEach(System.out::println);
 
 
 //        // 💥 forEach(): Aplica una acción a cada elemento.
@@ -30,45 +31,45 @@ public class StreamExamples {
 //
 
 //        // 🔗 reduce(): Combina todos los elementos en un solo valor.
-        /*String concatenatedNames = names.stream()
-                .reduce("", (a, b) -> a + " " + b);
-        System.out.println("Nombres concatenados: " + concatenatedNames);*/
+        //String concatenatedNames = names.stream()
+                //.reduce("", (a, b) -> a + " " + b);
+        //System.out.println("Nombres concatenados: " + concatenatedNames);
 
 
 //        // 📦 toList(): Recoge los elementos en una colección.
-//        List<String> namesStartingWithA = names.stream()
-//                .filter(name -> name.startsWith("A"))
-//                .toList();
-//        System.out.println("Nombres que empiezan con A: " + namesStartingWithA);
+        //List<String> namesStartingWithA = names.stream()
+                //.filter(name -> name.startsWith("A") || name.startsWith("J"))
+                //.toList();
+        //System.out.println("Nombres que empiezan con A y J: " + namesStartingWithA);
 
 
 //        // ✨ distinct(): Elimina los elementos duplicados.
-//        List<String> duplicates = Arrays.asList("Ana", "Luis", "Luis", "Maria", "Pedro");
-//        duplicates.stream()
-//                .distinct()
-//                .limit(3)
-//                .forEach(System.out::println);
+        //List<String> duplicates = Arrays.asList("Ana", "Luis", "Luis", "Maria", "Pedro");
+        //duplicates.stream()
+                //.distinct()
+                //.limit(3)
+                //.forEach(System.out::println);
 //
 
 //        // 🎚️ limit(): Limita el número de elementos procesados.
-            /*long cantFiltrados= names.stream()
-            .filter(n->n.length()>3)
-            .map(String::toUpperCase)
-            .count();
+            //long cantFiltrados= names.stream()
+            //.filter(n->n.length()>3)
+            //.map(String::toUpperCase)
+            //.count();
 
-        System.out.println(cantFiltrados);*/
+        //System.out.println(cantFiltrados);
 
 
-//        // 🔄 skip(): Omite un número específico de elementos.
-//        names.stream()
-//                .skip(2)
-//                .forEach(System.out::println);
+//         🔄 skip(): Omite un número específico de elementos.
+        //names.stream()
+                //.skip(2)
+                //.forEach(System.out::println);
 
 
 //        // 🔍 anyMatch(): Verifica si algún elemento cumple una condición.
-//        boolean anyStartsWithP = names.stream()
-//                .anyMatch(name -> name.startsWith("P"));
-//        System.out.println("¿Hay algún nombre que empiece con P?: " + anyStartsWithP);
+        //boolean anyStartsWithP = names.stream()
+                //.anyMatch(name -> name.startsWith("P"));
+        //System.out.println("¿Hay algún nombre que empiece con P?: " + anyStartsWithP);
 //
 //
 //        // 🔒 allMatch(): Verifica si todos los elementos cumplen una condición.

@@ -9,7 +9,7 @@ public class ConsumerExample {
          * 💡 Recibe un valor y no retorna nada.
          */
 
-        Consumer<String> consumer = (nombre)->System.out.println("Hola " + nombre);
+        Consumer<String> consumer = (nombre)->nombre.toUpperCase();
 
 
         consumer.accept("Dany");
