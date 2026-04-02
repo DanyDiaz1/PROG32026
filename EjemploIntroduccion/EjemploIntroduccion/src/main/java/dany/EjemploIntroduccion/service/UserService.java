@@ -3,6 +3,7 @@ package dany.EjemploIntroduccion.service;
 import dany.EjemploIntroduccion.model.User;
 import dany.EjemploIntroduccion.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

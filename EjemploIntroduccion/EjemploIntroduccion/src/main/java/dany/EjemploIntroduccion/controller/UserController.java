@@ -21,6 +21,7 @@ public class UserController {
 
     private final UserService userService;
 
+
     // GET /api/users  →  devuelve todos los usuarios
     @GetMapping
     public ResponseEntity<List<User>> getAll() {
