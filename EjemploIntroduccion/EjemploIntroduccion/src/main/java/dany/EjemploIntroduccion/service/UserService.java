@@ -12,10 +12,15 @@ import java.util.Optional;
 // @Service marca esta clase como componente de lógica de negocio
 @Service
 // @RequiredArgsConstructor inyecta automáticamente UserRepository
-@RequiredArgsConstructor
+
 public class UserService {
 
     private final UserRepository userRepository;
+
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<User> findAll() {
         return userRepository.findAll();

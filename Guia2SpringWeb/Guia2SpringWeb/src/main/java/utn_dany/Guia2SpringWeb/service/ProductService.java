@@ -35,8 +35,7 @@ public class ProductService {
         existing.setPrice(product.getPrice());
         existing.setStock(product.getStock());
 
-        return repository.update(existing)
-                .orElseThrow(() -> new RuntimeException("Error al actualizar"));
+        return repository.update(existing);
     }
 
     public void delete(Long id) {

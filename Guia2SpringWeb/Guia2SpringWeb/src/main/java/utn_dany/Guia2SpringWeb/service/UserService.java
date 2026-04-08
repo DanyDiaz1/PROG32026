@@ -34,8 +34,7 @@ public class UserService {
         existing.setName(user.getName());
         existing.setEmail(user.getEmail());
 
-        return repository.update(existing)
-                .orElseThrow(() -> new RuntimeException("Error al actualizar"));
+        return repository.update(existing);
     }
 
     public void delete(Long id) {

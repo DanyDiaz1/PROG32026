@@ -5,6 +5,7 @@ import utn_dany.Guia2SpringWeb.model.UserEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Repository
@@ -31,11 +32,11 @@ public class UserRepository implements IRepository<UserEntity> {
 
     @Override
     public boolean delete(UserEntity entity) {
-        return users.removeIf(u -> u.getId().equals(entity.getId()));
+        return users.remove(entity);
     }
 
     @Override
-    public Optional<UserEntity> update(UserEntity entity) {
+    public UserEntity update(UserEntity entity) {
         return users.stream()
                 .filter(u -> u.getId().equals(entity.getId()))
                 .findFirst()
@@ -43,7 +44,7 @@ public class UserRepository implements IRepository<UserEntity> {
                     existing.setName(entity.getName());
                     existing.setEmail(entity.getEmail());
                     return existing;
-                });
+                }).orElseThrow(()->new NoSuchElementException("Entity not found"));
     }
 
     public Optional<UserEntity> findById(Long id) {

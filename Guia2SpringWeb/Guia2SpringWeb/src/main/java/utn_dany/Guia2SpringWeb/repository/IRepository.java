@@ -11,5 +11,5 @@ public interface IRepository <T>{
 
     boolean delete(T entity);
 
-    Optional<T> update(T entity);
+    T update(T entity);
 }

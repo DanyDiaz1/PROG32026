@@ -6,6 +6,7 @@ import utn_dany.Guia2SpringWeb.model.SaleEntity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Repository
@@ -26,11 +27,11 @@ public class SaleRepository implements IRepository<SaleEntity> {
 
     @Override
     public boolean delete(SaleEntity entity) {
-        return sales.removeIf(s -> s.getId().equals(entity.getId()));
+        return !sales.remove(entity);
     }
 
     @Override
-    public Optional<SaleEntity> update(SaleEntity entity) {
+    public SaleEntity update(SaleEntity entity) {
         return sales.stream()
                 .filter(s -> s.getId().equals(entity.getId()))
                 .findFirst()
@@ -38,7 +39,7 @@ public class SaleRepository implements IRepository<SaleEntity> {
                     existing.setQuantity(entity.getQuantity());
                     existing.setTotalPrice(entity.getTotalPrice());
                     return existing;
-                });
+                }).orElseThrow(()->new NoSuchElementException("Entity not found"));
     }
 
     public Optional<SaleEntity> findById(Long id) {
