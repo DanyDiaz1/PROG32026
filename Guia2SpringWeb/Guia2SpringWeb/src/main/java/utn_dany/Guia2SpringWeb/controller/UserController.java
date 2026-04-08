@@ -21,9 +21,9 @@ public class UserController {
         return ResponseEntity.ok(service.getAll());
     }
 
-    @GetMapping
-    public ResponseEntity<UserEntity> getById(@RequestBody UserEntity user) {
-        return ResponseEntity.ok(service.getById(user.getId()));
+    @GetMapping("/{id}")
+    public ResponseEntity<UserEntity> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.getById(id));
     }
 
     @PostMapping
