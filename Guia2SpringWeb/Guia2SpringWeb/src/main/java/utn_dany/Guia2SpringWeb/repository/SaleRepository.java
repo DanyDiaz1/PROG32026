@@ -27,7 +27,7 @@ public class SaleRepository implements IRepository<SaleEntity> {
 
     @Override
     public boolean delete(SaleEntity entity) {
-        return !sales.remove(entity);
+        return sales.remove(entity);
     }
 
     @Override
