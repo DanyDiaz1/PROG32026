@@ -1,15 +1,15 @@
-package utn_dany.Guia2SpringWeb.model;
+package utn_dany.Guia2SpringWeb.model.dto.request;
 
 import lombok.*;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SaleEntity {
+@Getter
+@Setter
+@Builder
+public class SaleCreateRequestDTO {
     private Long id;
     private Long userId;
     private Long productId;
     private int quantity;
-    private double totalPrice;
 }
