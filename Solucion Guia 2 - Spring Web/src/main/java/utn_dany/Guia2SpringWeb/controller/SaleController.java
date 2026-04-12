@@ -4,9 +4,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import utn_dany.Guia2SpringWeb.model.CreateSale;
+import utn_dany.Guia2SpringWeb.model.dto.request.SaleCreateRequestDTO;
 import utn_dany.Guia2SpringWeb.model.SaleEntity;
-import utn_dany.Guia2SpringWeb.model.UpdateSale;
+import utn_dany.Guia2SpringWeb.model.dto.request.SaleUpdateRequestDTO;
+import utn_dany.Guia2SpringWeb.model.dto.response.SaleResponseDTO;
 import utn_dany.Guia2SpringWeb.service.SaleService;
 
 import java.util.List;
@@ -18,16 +19,16 @@ public class SaleController {
     private final SaleService saleService;
 
     @PostMapping
-    public ResponseEntity<SaleEntity> create(@RequestBody CreateSale createSale) {
+    public ResponseEntity<SaleResponseDTO> create(@RequestBody SaleCreateRequestDTO saleCreateRequestDTO) {
         try{
-            return ResponseEntity.status(HttpStatus.CREATED).body(saleService.create(createSale));
+            return ResponseEntity.status(HttpStatus.CREATED).body(saleService.create(saleCreateRequestDTO));
         }catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
 
     @GetMapping
-    public ResponseEntity<List<SaleEntity>> getAll() {
+    public ResponseEntity<List<SaleResponseDTO>> getAll() {
         try{
             return ResponseEntity.status(HttpStatus.OK).body(saleService.findAll());
         }catch (Exception e) {
@@ -36,7 +37,7 @@ public class SaleController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<SaleEntity> getById(@PathVariable Long id) {
+    public ResponseEntity<SaleResponseDTO> getById(@PathVariable Long id) {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(saleService.findById(id));
         }catch (Exception e) {
@@ -45,10 +46,10 @@ public class SaleController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<SaleEntity> update(@PathVariable Long id,
-                                         @RequestBody UpdateSale updateSale) {
+    public ResponseEntity<SaleResponseDTO> update(@PathVariable Long id,
+                                         @RequestBody SaleUpdateRequestDTO saleUpdateRequestDTO) {
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(saleService.update(id, updateSale));
+            return ResponseEntity.status(HttpStatus.OK).body(saleService.update(id, saleUpdateRequestDTO));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
