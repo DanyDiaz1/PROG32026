@@ -16,7 +16,7 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository userRepository;
-    private final UserMapper     userMapper;
+    private final UserMapper userMapper;
 
     // ── CREATE ─────────────────────────────────────────────────────────────
     // Flujo: RequestDTO → Entity → save() → ResponseDTO
