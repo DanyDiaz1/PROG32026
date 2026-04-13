@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b9e35e0-cf8d-4924-b246-bb16dfe7c018" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/DtoBuilderMapperApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/model/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/model/dto/reponsedto/UserResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/model/dto/requestdto/UserRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/java/dany/DTOBuilderMapper/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOBuilderMapper/DTOBuilderMapper/src/test/java/dany/DTOBuilderMapper/DtoBuilderMapperApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/DtoMapStructApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/model/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/model/dto/reponsedto/UserResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/model/dto/requestdto/UserRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/java/dany/DTOMapStruct/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOMapStruct/DTOMapStruct/src/test/java/dany/DTOMapStruct/DtoMapStructApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/DtoModelMapperApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/model/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/model/dto/reponsedto/UserResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/model/dto/requestdto/UserRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/java/dany/DTOModelMapper/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTOModelMapper/DTOModelMapper/src/test/java/dany/DTOModelMapper/DtoModelMapperApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="dto-MapStruct" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DanyDiaz1&quot;
+  }
+}</component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1776045977" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dto-Builder" />
+                    <option name="lastUsedInstant" value="1775953176" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="resolucionGuia2" />
+                    <option name="lastUsedInstant" value="1775953175" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$/.." />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DanyDiaz1/PROG32026.git&quot;,
+    &quot;accountId&quot;: &quot;8091c529-ace2-40ae-87bf-7a53c63bc619&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3CAJFQINPUA7dwWpfzxckDzVXwf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DtoBuilderMapperApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DtoMapStructApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DtoModelMapperApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Danie/OneDrive/Escritorio/Programacion III 2026/DTOExamples&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="DTOExamples" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="DTOExamples" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b9e35e0-cf8d-4924-b246-bb16dfe7c018" name="Changes" comment="" />
+      <created>1775822337767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775822337767</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
