@@ -5,6 +5,7 @@ import dany.Exceptions.dto.UserDTO;
 import dany.Exceptions.service.UserService;
 import dany.Exceptions.validation.Groups;
 import jakarta.validation.Valid;
+import jakarta.validation.groups.Default;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,7 +38,7 @@ public class UserController {
     // 🔹 POST (CREATE)
     @PostMapping
     public ResponseEntity<User> crear(
-            @Validated(Groups.Crear.class)
+            @Validated({Groups.Crear.class})
             @Valid
             @RequestBody UserDTO dto) {
 

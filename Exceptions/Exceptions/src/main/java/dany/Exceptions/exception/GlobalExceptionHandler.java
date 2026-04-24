@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
 
 import java.util.stream.Collectors;
 
@@ -14,9 +15,9 @@ public class GlobalExceptionHandler {
 
     // 🔴 404 - NO ENCONTRADO
     @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleNotFound(UserNotFoundException ex) {
+    public ResponseEntity<ErrorResponse> handleNotFound(UserNotFoundException ex, WebRequest request) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(new ErrorResponse(ex.getMessage(), "NOT_FOUND"));
+                .body(new ErrorResponse(ex.getMessage(), request.getDescription(false)));
     }
 
     // 🔴 400 - VALIDACIONES (@Valid)

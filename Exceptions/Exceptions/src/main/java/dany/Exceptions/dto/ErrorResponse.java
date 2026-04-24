@@ -20,5 +20,4 @@ public class ErrorResponse {
         this.mensaje = mensaje;
         this.detalle = detalle;
     }
-
 }
