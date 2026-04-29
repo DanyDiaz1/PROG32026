@@ -2,6 +2,8 @@ package utn_dany.Guia2SpringWeb.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import utn_dany.Guia2SpringWeb.exception.DeleteOperationException;
+import utn_dany.Guia2SpringWeb.exception.UserNotFoundException;
 import utn_dany.Guia2SpringWeb.model.UserEntity;
 import utn_dany.Guia2SpringWeb.repository.UserRepository;
 
@@ -20,7 +22,7 @@ public class UserService {
 
     public UserEntity getById(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Usuario no encontrado"));
+                .orElseThrow(() -> new UserNotFoundException("Usuario no encontrado"));
     }
 
     public UserEntity create(UserEntity user) {
@@ -42,7 +44,7 @@ public class UserService {
         UserEntity existing = getById(id);
 
         if (!repository.delete(existing)) {
-            throw new RuntimeException("No se pudo eliminar");
+            throw new DeleteOperationException("No se pudo eliminar");
         }
     }
 }

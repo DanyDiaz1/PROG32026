@@ -2,6 +2,10 @@ package utn_dany.Guia2SpringWeb.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import utn_dany.Guia2SpringWeb.exception.DeleteOperationException;
+import utn_dany.Guia2SpringWeb.exception.InsufficientStockException;
+import utn_dany.Guia2SpringWeb.exception.InvalidQuantityException;
+import utn_dany.Guia2SpringWeb.exception.SaleNotFoundException;
 import utn_dany.Guia2SpringWeb.mapper.SaleMapper;
 import utn_dany.Guia2SpringWeb.model.*;
 import utn_dany.Guia2SpringWeb.model.dto.request.SaleCreateRequestDTO;
@@ -26,11 +30,11 @@ public class SaleService {
         ProductEntity product = productService.getById(newSale.getProductId());
 
         if(newSale.getQuantity() <= 0) {
-            throw new IllegalArgumentException("La cantidad debe ser mayor a 0.");
+            throw new InvalidQuantityException("La cantidad debe ser mayor a 0.");
         }
 
         if(product.getStock() < newSale.getQuantity()){
-            throw new IllegalArgumentException("No hay suficiente stock disponible.");
+            throw new InsufficientStockException("No hay suficiente stock disponible.");
         }
         product.setStock(product.getStock() - newSale.getQuantity());
         productService.update(product.getId(), product);
@@ -49,7 +53,7 @@ public class SaleService {
 
     public SaleResponseDTO findById(Long saleId) {
         return mapper.toResponseDTO(repository.findById(saleId)
-                .orElseThrow(() -> new NoSuchElementException("Venta no encontrada.")));
+                .orElseThrow(() -> new SaleNotFoundException("Venta no encontrada.")));
     }
 
     public SaleResponseDTO update(Long saleId, SaleUpdateRequestDTO saleUpdateRequestDTO) {
@@ -57,14 +61,14 @@ public class SaleService {
         SaleEntity sale = repository.findById(saleId).orElseThrow(() -> new NoSuchElementException("Venta no encontrada."));
 
         if(saleUpdateRequestDTO.getQuantity() < 1) {
-            throw new IllegalArgumentException("La cantidad debe ser mayor a cero.");
+            throw new InvalidQuantityException("La cantidad debe ser mayor a cero.");
         }
 
         ProductEntity product = productService.getById(sale.getProductId());
 
         int differenceStock = saleUpdateRequestDTO.getQuantity() - sale.getQuantity();
         if(saleUpdateRequestDTO.getQuantity() > sale.getQuantity() && product.getStock() < differenceStock) {
-            throw new IllegalArgumentException("No hay suficiente stock.");
+            throw new InsufficientStockException("No hay suficiente stock.");
         }
 
 
@@ -82,7 +86,7 @@ public class SaleService {
         productService.update(product.getId(), product);
         */
         if(!repository.delete(toDelete)){
-            throw new RuntimeException("No se pudo eliminar la venta.");
+            throw new DeleteOperationException("No se pudo eliminar la venta.");
         }
     }
 

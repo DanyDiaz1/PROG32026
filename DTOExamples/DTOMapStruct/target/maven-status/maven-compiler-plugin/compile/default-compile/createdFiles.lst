@@ -1,0 +1,12 @@
+dany\DTOMapStruct\service\UserService.class
+dany\DTOMapStruct\mapper\UserMapper.class
+dany\DTOMapStruct\model\UserEntity$UserEntityBuilder.class
+dany\DTOMapStruct\model\dto\requestdto\UserRequestDTO.class
+dany\DTOMapStruct\model\dto\reponsedto\UserResponseDTO.class
+dany\DTOMapStruct\mapper\UserMapperImpl.class
+dany\DTOMapStruct\model\UserEntity.class
+dany\DTOMapStruct\repository\UserRepository.class
+dany\DTOMapStruct\DtoMapStructApplication.class
+dany\DTOMapStruct\model\dto\reponsedto\UserResponseDTO$UserResponseDTOBuilder.class
+dany\DTOMapStruct\repository\IRepository.class
+dany\DTOMapStruct\controller\UserController.class
