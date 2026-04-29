@@ -36,15 +36,13 @@ public class UserService {
         existing.setName(user.getName());
         existing.setEmail(user.getEmail());
 
-        return repository.update(existing);
+        return repository.save(existing);
     }
 
     public void delete(Long id) {
 
         UserEntity existing = getById(id);
 
-        if (!repository.delete(existing)) {
-            throw new DeleteOperationException("No se pudo eliminar");
-        }
+        repository.delete(existing);
     }
 }

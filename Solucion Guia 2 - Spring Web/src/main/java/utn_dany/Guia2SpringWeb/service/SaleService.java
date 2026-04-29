@@ -58,24 +58,24 @@ public class SaleService {
 
     public SaleResponseDTO update(Long saleId, SaleUpdateRequestDTO saleUpdateRequestDTO) {
 
-        SaleEntity sale = repository.findById(saleId).orElseThrow(() -> new NoSuchElementException("Venta no encontrada."));
+        SaleEntity sale = repository.findById(saleId).orElseThrow(() -> new SaleNotFoundException("Venta no encontrada."));
 
-        if(saleUpdateRequestDTO.getQuantity() < 1) {
-            throw new InvalidQuantityException("La cantidad debe ser mayor a cero.");
-        }
-
-        ProductEntity product = productService.getById(sale.getProductId());
+        ProductEntity product = productService.getById(sale.getProduct().getId());
 
         int differenceStock = saleUpdateRequestDTO.getQuantity() - sale.getQuantity();
         if(saleUpdateRequestDTO.getQuantity() > sale.getQuantity() && product.getStock() < differenceStock) {
             throw new InsufficientStockException("No hay suficiente stock.");
         }
 
-
         product.setStock(product.getStock() - differenceStock);
         productService.update(product.getId(), product);
 
-        return mapper.toResponseDTO(repository.update(mapper.toUpdatedEntity(sale,saleUpdateRequestDTO,saleUpdateRequestDTO.getQuantity()* product.getPrice())));
+        sale.setQuantity(saleUpdateRequestDTO.getQuantity());
+        sale.setTotalPrice(sale.getQuantity() * product.getPrice());
+
+        SaleEntity updated = repository.save(sale);
+
+        return mapper.toResponseDTO(updated);
     }
 
     public void delete(Long idSale) {
@@ -85,9 +85,7 @@ public class SaleService {
         product.setStock(product.getStock() + toDelete.getQuantity());
         productService.update(product.getId(), product);
         */
-        if(!repository.delete(toDelete)){
-            throw new DeleteOperationException("No se pudo eliminar la venta.");
-        }
+        repository.delete(toDelete);
     }
 
 }

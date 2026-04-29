@@ -1,13 +1,21 @@
 package utn_dany.Guia2SpringWeb.model;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Data
+
+
+@Entity
+@Table(name = "products")
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProductEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private double price;
     private int stock;

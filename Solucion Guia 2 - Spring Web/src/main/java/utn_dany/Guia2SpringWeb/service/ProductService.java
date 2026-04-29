@@ -37,15 +37,13 @@ public class ProductService {
         existing.setPrice(product.getPrice());
         existing.setStock(product.getStock());
 
-        return repository.update(existing);
+        return repository.save(existing);
     }
 
     public void delete(Long id) {
 
         ProductEntity existing = getById(id);
 
-        if (!repository.delete(existing)) {
-            throw new DeleteOperationException("No se pudo eliminar");
-        }
+        repository.delete(existing);
     }
 }
