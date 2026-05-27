@@ -56,7 +56,7 @@ public class ProductoController {
             summary = "Crear producto",
             description = "Registra un nuevo producto en el sistema"
     )
-    @ApiResponse(responseCode = "200", description = "Producto creado correctamente")
+    @ApiResponse(responseCode = "201", description = "Producto creado correctamente")
     @ApiResponse(responseCode = "400", description = "Datos inválidos")
     public ResponseEntity<ProductoDTO> crearProducto(@Valid @RequestBody ProductoDTO productoDTO) {
         productoDTO.setId((long) (productos.size() + 1));
