@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: springSecurity
+
+#Database configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/securitydb
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+# JWT configuration
+# Usar una clave larga evita errores como "Illegal base64 character".
+# En un proyecto real deberia venir de una variable de entorno.
+security:
+  jwt:
+    secret-key: 2f8c7e1a9b4d6f0a3c5e7b9d1f4a6c8e2f8c7e1a9b4d6f0a
+    expiration-ms: 3600000
